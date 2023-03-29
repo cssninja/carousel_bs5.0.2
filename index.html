@@ -218,6 +218,11 @@
         -webkit-text-size-adjust: 100%;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       } */
+
+      /* TOP OF TITLE MARGIN FIX (only when content present) */
+      .bs5 .featurette-heading {
+        margin-top: 1rem;
+      }
     </style>
 
     <!-- MUST FIX, GET TO WORK WITH bs5.0.2_iso .. CUSTOM CSS ABOVE IS NOT PREPENDED WITH .bs5 (at times have to put class .bs5 in () in codepen bcs error pops up but not in stackblitz) BUT IS STILL WORKING, WHY? .. CODEPEN VERSION IS WITH THE HTML FIX ABOVE, STACKBLITZ IS NOT, IS USING ORIGINAL BS CSS BELOW .. this is a body tag issue basically .. also missing type="text/css" in css call below, ref: https://stackoverflow.com/questions/25006883/css-my-body-tag-is-not-working and https://stackoverflow.com/questions/13193758/body-class-not-working .. examine order too .. error in comment tags too .. also try adding .bs5 to html in bs5.0.2_iso file then add that class to html tag instead of  in div tag and see if that nabs body styles -->
@@ -367,13 +372,14 @@
           <div class="featurette-divider"></div>
 
           <div class="row featurette">
-            <!-- / / / / / ORDER TOGGLE OF IMG AND TEXT STARTS HERE, order-md-2 and order-md-1 -->
+            <!-- / / / / / ORDER TOGGLE OF TEXT AND IMG STARTS HERE, order-md-2 and order-md-1 -->
             <div class="col-md-7 order-md-2">
               <h2 class="featurette-heading">Guinness</h2>
               <p class="lead">Some short description of this retail cardboard display goes right here.</p>
 
               <div class="container pb-3">
                 <div class="row">
+                  <!-- ALSO TOGGLING THIS ORDER -->
                   <div class="col order-md-2" style="width:250px;height:auto;margin-left:-30px;">
                     <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
                   </div>
@@ -434,7 +440,25 @@
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
               <h2 class="featurette-heading">Baileys</h2>
-              <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+              <p class="lead">Some short description of this retail cardboard display goes right here.</p>
+
+              <div class="container pb-3">
+                <div class="row">
+                  <!-- ALSO TOGGLING THIS ORDER -->
+                  <div class="col order-md-2" style="width:250px;height:auto;margin-left:-30px;">
+                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  </div>
+                  <div class="col order-md-1" style="font-size:0.85em;">
+                    <br />
+                    SKU: JOHNNW502
+                    </br><br />
+                    PRICE: $250
+                    </br><br />
+                    <button type="button" class="btn btn-dark">Buy</button>
+                  </div>
+                </div>
+              </div>
+              
             </div>
             <div class="col-md-5 order-md-1">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
