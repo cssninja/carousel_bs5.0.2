@@ -223,6 +223,16 @@
       .bs5 .featurette-heading {
         margin-top: 1rem;
       }
+
+      /* thanks to: https://www.w3schools.com/cssref/tryit.php?filename=trycss3_background_hero and https://stackoverflow.com/questions/4997493/set-opacity-of-background-image-without-affecting-child-elements */
+      .carousel-item {
+        background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://pionezero.com/diageo/banners/johnniew_banner.jpg");
+        /* height: 500px; */
+        background-position: center; /* x% y% */
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
     </style>
 
     <!-- MUST FIX, GET TO WORK WITH bs5.0.2_iso .. CUSTOM CSS ABOVE IS NOT PREPENDED WITH .bs5 (at times have to put class .bs5 in () in codepen bcs error pops up but not in stackblitz) BUT IS STILL WORKING, WHY? .. CODEPEN VERSION IS WITH THE HTML FIX ABOVE, STACKBLITZ IS NOT, IS USING ORIGINAL BS CSS BELOW .. this is a body tag issue basically .. also missing type="text/css" in css call below, ref: https://stackoverflow.com/questions/25006883/css-my-body-tag-is-not-working and https://stackoverflow.com/questions/13193758/body-class-not-working .. examine order too .. error in comment tags too .. also try adding .bs5 to html in bs5.0.2_iso file then add that class to html tag instead of  in div tag and see if that nabs body styles -->
@@ -285,12 +295,12 @@
           </div>
           <div class="carousel-inner" style="background-color:#777777 !important;">
             <div class="carousel-item active">
-              <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+              <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> -->
 
               <div class="container">
                 <div class="carousel-caption text-start">
-                  <h1>Example headline.</h1>
-                  <p>Some representative placeholder content for the first slide of the carousel.</p>
+                  <h1 style="background:#F3B834;font-color:#212529;padding:10px;width:300px;">Johnnie Walker</h1>
+                  <p><br /><!-- Some representative placeholder content for the first slide of the carousel. --></p>
                   <p><a class="btn btn-lg btn-dark" href="https://xd.adobe.com/view/02eedb95-0e76-4ac2-8a96-6c528a752d41-57bd/" target="blank">Buy</a></p>
                 </div>
               </div>
