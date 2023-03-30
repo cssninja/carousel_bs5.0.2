@@ -225,8 +225,24 @@
       }
 
       /* thanks to: https://www.w3schools.com/cssref/tryit.php?filename=trycss3_background_hero and https://stackoverflow.com/questions/4997493/set-opacity-of-background-image-without-affecting-child-elements */
-      .carousel-item {
+      .bg_1 {
         background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://pionezero.com/diageo/banners/johnniew_banner.jpg");
+        /* height: 500px; */
+        background-position: center; /* x% y% */
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .bg_2 {
+        background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://pionezero.com/diageo/banners/guinness_banner.jpg");
+        /* height: 500px; */
+        background-position: center; /* x% y% */
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .bg_3 {
+        background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://pionezero.com/diageo/banners/tanqueray_banner.jpg");
         /* height: 500px; */
         background-position: center; /* x% y% */
         background-repeat: no-repeat;
@@ -294,14 +310,14 @@
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class="roundb" aria-label="Slide 3"></button>
           </div>
           <div class="carousel-inner" style="background-color:#777777 !important;">
-            <div class="carousel-item active">
+            <div class="carousel-item active bg_1">
               <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> -->
 
               <div class="container">
                 <div class="carousel-caption text-start">
-                  <h1 style="background:#F3B834;font-color:#212529;padding:10px;width:300px;">Johnnie Walker</h1>
+                  <h1 style="background:#F3B834;color:#212529;padding:10px;width:300px;">Johnnie Walker</h1>
                   <p><br /><!-- Some representative placeholder content for the first slide of the carousel. --></p>
-                  <p><a class="btn btn-lg btn-dark" href="https://xd.adobe.com/view/02eedb95-0e76-4ac2-8a96-6c528a752d41-57bd/" target="blank">Buy</a></p>
+                  <p><a class="btn btn-lg btn-dark" href="#target_1">Buy</a></p>
                 </div>
               </div>
             </div>
@@ -351,7 +367,7 @@
 
           <div class="row featurette">
             <div class="col-md-7">
-              <h2 class="featurette-heading">Johnnie Walker</h2>
+              <h2 class="featurette-heading" id="target_1">Johnnie Walker</h2>
               <p class="lead">Some short description of this retail cardboard display goes right here.</p>
 
                 <div class="container pb-3">
