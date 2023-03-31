@@ -94,8 +94,12 @@
 
       /* Featurettes
       ------------------------- */
-      .bs5 .featurette-divider {
-        margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+      .featurette-divider {
+        /* Space out the Bootstrap <hr> more */
+        /* margin: 5rem 0; */
+        display: block !important;
+        width: 100% !important;
+        height: 70px !important;
       }
       /* Thin out the marketing headings */
       .bs5 .featurette-heading {
@@ -249,6 +253,48 @@
         background-size: cover;
         position: relative;
       }
+      
+      /* small text container and styles */
+      .smtxt {
+        display: block;
+        margin: 0px;
+        font-size: 0.9em;
+        max-width: 100px !important; /* do media query for mobile at 100px */
+        height:200px;
+        /* dev */
+        border:1px solid #000 !important;
+      }
+      /* box container */
+      .bxmar {
+        display: block;
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+        min-width: 220px !important;
+        height: 250px;
+        /* dev */
+        border:1px solid #000 !important;
+        background-image: url("https://pionezero.com/diageo/icon_finder/box.png");
+        background-position: center; /* x% y% */
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        opacity:0.3;
+      }
+      /* box sixe (original non-bg img) */
+      .bxmar img {
+        /* display: block;
+        max-width: 250px !important;
+        height:auto;
+        opacity:0.3; */
+      }
+      /* bg for brand img */
+      .brandbg {
+        width:100%;
+        height:auto;
+        background:#ebebeb;
+        border-radius:18px;
+        padding:12px;
+      }
     </style>
 
     <!-- MUST FIX, GET TO WORK WITH bs5.0.2_iso .. CUSTOM CSS ABOVE IS NOT PREPENDED WITH .bs5 (at times have to put class .bs5 in () in codepen bcs error pops up but not in stackblitz) BUT IS STILL WORKING, WHY? .. CODEPEN VERSION IS WITH THE HTML FIX ABOVE, STACKBLITZ IS NOT, IS USING ORIGINAL BS CSS BELOW .. this is a body tag issue basically .. also missing type="text/css" in css call below, ref: https://stackoverflow.com/questions/25006883/css-my-body-tag-is-not-working and https://stackoverflow.com/questions/13193758/body-class-not-working .. examine order too .. error in comment tags too .. also try adding .bs5 to html in bs5.0.2_iso file then add that class to html tag instead of  in div tag and see if that nabs body styles -->
@@ -317,7 +363,7 @@
                 <div class="carousel-caption text-start">
                   <h1 style="background:#F3B834;color:#212529;padding:10px;width:300px;text-align:center;">Johnnie Walker</h1>
                   <p><br /><!-- Some representative placeholder content for the first slide of the carousel. --></p>
-                  <p><a class="btn btn-lg btn-dark" href="#target_1">Buy Display</a></p>
+                  <p><a class="btn btn-lg btn-dark" href="#target_1">Buy</a></p>
                 </div>
               </div>
             </div>
@@ -328,7 +374,7 @@
                 <div class="carousel-caption text-start">
                   <h1 style="background:#EBD29F;color:#212529;padding:10px;width:300px;text-align:center;">Guinness</h1>
                   <p><br /><!-- Some representative placeholder content for the second slide of the carousel. --></p>
-                  <p><a class="btn btn-lg btn-dark" href="#target_2">Buy Display</a></p>
+                  <p><a class="btn btn-lg btn-dark" href="#target_2">Buy</a></p>
                 </div>
               </div>
             </div>
@@ -339,7 +385,7 @@
                 <div class="carousel-caption text-start">
                   <h1 style="background:#97DA8C;color:#212529;padding:10px;width:300px;text-align:center;">Tanqueray</h1>
                   <p><br /><!-- Some representative placeholder content for the third slide of this carousel. --></p>
-                  <p><a class="btn btn-lg btn-dark" href="#target_3">Buy Display</a></p>
+                  <p><a class="btn btn-lg btn-dark" href="#target_3">Buy</a></p>
                 </div>
               </div>
             </div>
@@ -363,7 +409,7 @@
 
           <!-- START THE FEATURETTES -->
 
-          <div class="featurette-divider" id="target_1" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider" id="target_1"></div>
 
           <div class="row featurette">
             <div class="col-md-7">
@@ -372,16 +418,16 @@
 
                 <div class="container pb-3">
                   <div class="row">
-                    <div class="col" style="width:250px;height:auto;margin-left:-30px;">
-                      <a href="https://xd.adobe.com/view/02eedb95-0e76-4ac2-8a96-6c528a752d41-57bd/" target="blank"><img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;"></a>
+                    <div class="col bxmar">
+                      <!-- <a href="https://xd.adobe.com/view/02eedb95-0e76-4ac2-8a96-6c528a752d41-57bd/" target="blank"><img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"></a> -->
                     </div>
-                    <div class="col" style="font-size:0.85em;">
+                    <div class="col smtxt">
                       <br />
-                      SKU: JOHNNW502
+                      SKU: JOHN45
                       </br><br />
                       PRICE: $250
                       </br><br />
-                      <a href="https://xd.adobe.com/view/02eedb95-0e76-4ac2-8a96-6c528a752d41-57bd/" target="blank"><button type="button" class="btn btn-dark">Buy Display</button></a>
+                      <a href="https://xd.adobe.com/view/02eedb95-0e76-4ac2-8a96-6c528a752d41-57bd/" target="blank"><button type="button" class="btn btn-dark">Buy</button></a>
                     </div>
                   </div>
                 </div>
@@ -390,12 +436,12 @@
             <div class="col-md-5">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <a href="https://xd.adobe.com/view/02eedb95-0e76-4ac2-8a96-6c528a752d41-57bd/" target="blank"><img src="https://pionezero.com/diageo/brands/brands__0010_jonniewalker.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;"></a>
+              <a href="https://xd.adobe.com/view/02eedb95-0e76-4ac2-8a96-6c528a752d41-57bd/" target="blank"><img src="https://pionezero.com/diageo/brands/brands__0010_jonniewalker.jpg" class="brandbg"></a>
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" id="target_2" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider" id="target_2"></div>
 
           <div class="row featurette">
             <!-- / / / / / ORDER TOGGLE OF TEXT AND IMG STARTS HERE, order-md-2 and order-md-1 -->
@@ -406,16 +452,16 @@
               <div class="container pb-3">
                 <div class="row">
                   <!-- ALSO TOGGLING THIS ORDER -->
-                  <div class="col order-md-2" style="width:250px;height:auto;margin-left:-30px;">
-                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  <div class="col bxmar order-md-2">
+                   <!-- <img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"> -->
                   </div>
-                  <div class="col order-md-1" style="font-size:0.85em;">
+                  <div class="col smtxt order-md-1">
                     <br />
-                    SKU: JOHNNW502
+                    SKU: GUIN87
                     </br><br />
                     PRICE: $250
                     </br><br />
-                    <button type="button" class="btn btn-dark">Buy Display</button>
+                    <button type="button" class="btn btn-dark">Buy</button>
                   </div>
                 </div>
               </div>
@@ -424,12 +470,12 @@
             <div class="col-md-5 order-md-1">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <img src="https://pionezero.com/diageo/brands/brands__0007_guinness.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;">
+              <img src="https://pionezero.com/diageo/brands/brands__0007_guinness.jpg" class="brandbg">
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" id="target_3" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider" id="target_3"></div>
 
           <div class="row featurette">
             <div class="col-md-7">
@@ -438,16 +484,16 @@
 
               <div class="container pb-3">
                 <div class="row">
-                  <div class="col" style="width:250px;height:auto;margin-left:-30px;">
-                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  <div class="col bxmar">
+                    <!-- <img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"> -->
                   </div>
-                  <div class="col" style="font-size:0.85em;">
+                  <div class="col smtxt">
                     <br />
-                    SKU: JOHNNW502
+                    SKU: TANQ900
                     </br><br />
                     PRICE: $250
                     </br><br />
-                    <button type="button" class="btn btn-dark">Buy Display</button>
+                    <button type="button" class="btn btn-dark">Buy</button>
                   </div>
                 </div>
               </div>
@@ -456,12 +502,12 @@
             <div class="col-md-5">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <img src="https://pionezero.com/diageo/brands/brands__0004_tanqueray.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;">
+              <img src="https://pionezero.com/diageo/brands/brands__0004_tanqueray.jpg" class="brandbg">
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider"></div>
 
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
@@ -471,16 +517,16 @@
               <div class="container pb-3">
                 <div class="row">
                   <!-- ALSO TOGGLING THIS ORDER -->
-                  <div class="col order-md-2" style="width:250px;height:auto;margin-left:-30px;">
-                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  <div class="col bxmar order-md-2">
+                    <!-- <img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"> -->
                   </div>
-                  <div class="col order-md-1" style="font-size:0.85em;">
+                  <div class="col smtxt order-md-1">
                     <br />
-                    SKU: JOHNNW502
+                    SKU: BAIL17
                     </br><br />
                     PRICE: $250
                     </br><br />
-                    <button type="button" class="btn btn-dark">Buy Display</button>
+                    <button type="button" class="btn btn-dark">Buy</button>
                   </div>
                 </div>
               </div>
@@ -489,12 +535,12 @@
             <div class="col-md-5 order-md-1">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <img src="https://pionezero.com/diageo/brands/brands__0000_baileys.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;">
+              <img src="https://pionezero.com/diageo/brands/brands__0000_baileys.jpg" class="brandbg">
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider"></div>
 
           <div class="row featurette">
             <div class="col-md-7">
@@ -503,16 +549,16 @@
 
               <div class="container pb-3">
                 <div class="row">
-                  <div class="col" style="width:250px;height:auto;margin-left:-30px;">
-                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  <div class="col bxmar">
+                    <!-- <img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"> -->
                   </div>
-                  <div class="col" style="font-size:0.85em;">
+                  <div class="col smtxt">
                     <br />
-                    SKU: JOHNNW502
+                    SKU: SMIR460
                     </br><br />
                     PRICE: $250
                     </br><br />
-                    <button type="button" class="btn btn-dark">Buy Display</button>
+                    <button type="button" class="btn btn-dark">Buy</button>
                   </div>
                 </div>
               </div>
@@ -521,12 +567,12 @@
             <div class="col-md-5">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <img src="https://pionezero.com/diageo/brands/brands__0011_sminoff.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;">
+              <img src="https://pionezero.com/diageo/brands/brands__0011_sminoff.jpg" class="brandbg">
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider"></div>
 
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
@@ -536,16 +582,16 @@
               <div class="container pb-3">
                 <div class="row">
                   <!-- ALSO TOGGLING THIS ORDER -->
-                  <div class="col order-md-2" style="width:250px;height:auto;margin-left:-30px;">
-                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  <div class="col bxmar order-md-2">
+                    <!-- <img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"> -->
                   </div>
-                  <div class="col order-md-1" style="font-size:0.85em;">
+                  <div class="col smtxt order-md-1">
                     <br />
-                    SKU: JOHNNW502
+                    SKU: CAPT681
                     </br><br />
                     PRICE: $250
                     </br><br />
-                    <button type="button" class="btn btn-dark">Buy Display</button>
+                    <button type="button" class="btn btn-dark">Buy</button>
                   </div>
                 </div>
               </div>
@@ -554,12 +600,12 @@
             <div class="col-md-5 order-md-1">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <img src="https://pionezero.com/diageo/brands/brands__0002_captainmorgan.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;">
+              <img src="https://pionezero.com/diageo/brands/brands__0002_captainmorgan.jpg" class="brandbg">
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider"></div>
 
           <div class="row featurette">
             <div class="col-md-7">
@@ -568,16 +614,16 @@
 
               <div class="container pb-3">
                 <div class="row">
-                  <div class="col" style="width:250px;height:auto;margin-left:-30px;">
-                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  <div class="col bxmar">
+                    <!-- <img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"> -->
                   </div>
-                  <div class="col" style="font-size:0.85em;">
+                  <div class="col smtxt">
                     <br />
-                    SKU: JOHNNW502
+                    SKU: CROW91
                     </br><br />
                     PRICE: $250
                     </br><br />
-                    <button type="button" class="btn btn-dark">Buy Display</button>
+                    <button type="button" class="btn btn-dark">Buy</button>
                   </div>
                 </div>
               </div>
@@ -586,12 +632,12 @@
             <div class="col-md-5">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <img src="https://pionezero.com/diageo/brands/brands__0005_crownroyal.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;">
+              <img src="https://pionezero.com/diageo/brands/brands__0005_crownroyal.jpg" class="brandbg">
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider"></div>
 
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
@@ -601,16 +647,16 @@
               <div class="container pb-3">
                 <div class="row">
                   <!-- ALSO TOGGLING THIS ORDER -->
-                  <div class="col order-md-2" style="width:250px;height:auto;margin-left:-30px;">
-                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  <div class="col bxmar order-md-2">
+                    <!-- <img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"> -->
                   </div>
-                  <div class="col order-md-1" style="font-size:0.85em;">
+                  <div class="col smtxt order-md-1">
                     <br />
-                    SKU: JOHNNW502
+                    SKU: DONJ284
                     </br><br />
                     PRICE: $250
                     </br><br />
-                    <button type="button" class="btn btn-dark">Buy Display</button>
+                    <button type="button" class="btn btn-dark">Buy</button>
                   </div>
                 </div>
               </div>
@@ -619,12 +665,12 @@
             <div class="col-md-5 order-md-1">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <img src="https://pionezero.com/diageo/brands/brands__0006_donjulio.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;">
+              <img src="https://pionezero.com/diageo/brands/brands__0006_donjulio.jpg" class="brandbg">
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider"></div>
 
           <div class="row featurette">
             <div class="col-md-7">
@@ -633,16 +679,16 @@
 
               <div class="container pb-3">
                 <div class="row">
-                  <div class="col" style="width:250px;height:auto;margin-left:-30px;">
-                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  <div class="col bxmar">
+                    <!-- <img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"> -->
                   </div>
-                  <div class="col" style="font-size:0.85em;">
+                  <div class="col smtxt">
                     <br />
-                    SKU: JOHNNW502
+                    SKU: CIRO28
                     </br><br />
                     PRICE: $250
                     </br><br />
-                    <button type="button" class="btn btn-dark">Buy Display</button>
+                    <button type="button" class="btn btn-dark">Buy</button>
                   </div>
                 </div>
               </div>
@@ -651,12 +697,12 @@
             <div class="col-md-5">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <img src="https://pionezero.com/diageo/brands/brands__0003_ciroc.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;">
+              <img src="https://pionezero.com/diageo/brands/brands__0003_ciroc.jpg" class="brandbg">
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider"></div>
 
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
@@ -666,16 +712,16 @@
               <div class="container pb-3">
                 <div class="row">
                   <!-- ALSO TOGGLING THIS ORDER -->
-                  <div class="col order-md-2" style="width:250px;height:auto;margin-left:-30px;">
-                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  <div class="col bxmar order-md-2">
+                    <!-- <img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"> -->
                   </div>
-                  <div class="col order-md-1" style="font-size:0.85em;">
+                  <div class="col smtxt order-md-1">
                     <br />
-                    SKU: JOHNNW502
+                    SKU: BUCH271
                     </br><br />
                     PRICE: $250
                     </br><br />
-                    <button type="button" class="btn btn-dark">Buy Display</button>
+                    <button type="button" class="btn btn-dark">Buy</button>
                   </div>
                 </div>
               </div>
@@ -684,12 +730,12 @@
             <div class="col-md-5 order-md-1">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <img src="https://pionezero.com/diageo/brands/brands__0001_buchanan.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;">
+              <img src="https://pionezero.com/diageo/brands/brands__0001_buchanan.jpg" class="brandbg">
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider"></div>
 
           <div class="row featurette">
             <div class="col-md-7">
@@ -698,16 +744,16 @@
 
               <div class="container pb-3">
                 <div class="row">
-                  <div class="col" style="width:250px;height:auto;margin-left:-30px;">
-                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  <div class="col bxmar">
+                    <!-- <img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"> -->
                   </div>
-                  <div class="col" style="font-size:0.85em;">
+                  <div class="col smtxt">
                     <br />
-                    SKU: JOHNNW502
+                    SKU: CASA37
                     </br><br />
                     PRICE: $250
                     </br><br />
-                    <button type="button" class="btn btn-dark">Buy Display</button>
+                    <button type="button" class="btn btn-dark">Buy</button>
                   </div>
                 </div>
               </div>
@@ -716,12 +762,12 @@
             <div class="col-md-5">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <img src="https://pionezero.com/diageo/brands/brands__0008_casamigos.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;">
+              <img src="https://pionezero.com/diageo/brands/brands__0008_casamigos.jpg" class="brandbg">
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider"></div>
 
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
@@ -731,16 +777,16 @@
               <div class="container pb-3">
                 <div class="row">
                   <!-- ALSO TOGGLING THIS ORDER -->
-                  <div class="col order-md-2" style="width:250px;height:auto;margin-left:-30px;">
-                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  <div class="col bxmar order-md-2">
+                    <!-- <img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"> -->
                   </div>
-                  <div class="col order-md-1" style="font-size:0.85em;">
+                  <div class="col smtxt order-md-1">
                     <br />
-                    SKU: JOHNNW502
+                    SKU: JB372
                     </br><br />
                     PRICE: $250
                     </br><br />
-                    <button type="button" class="btn btn-dark">Buy Display</button>
+                    <button type="button" class="btn btn-dark">Buy</button>
                   </div>
                 </div>
               </div>
@@ -749,12 +795,12 @@
             <div class="col-md-5 order-md-1">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <img src="https://pionezero.com/diageo/brands/brands__0009_j&b.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;">
+              <img src="https://pionezero.com/diageo/brands/brands__0009_j&b.jpg" class="brandbg">
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider"></div>
 
           <div class="row featurette">
             <div class="col-md-7">
@@ -763,16 +809,16 @@
 
               <div class="container pb-3">
                 <div class="row">
-                  <div class="col" style="width:250px;height:auto;margin-left:-30px;">
-                    <img src="https://pionezero.com/diageo/icon_finder/box.png" style="width:250px;height:auto;opacity:0.3;">
+                  <div class="col bxmar">
+                    <!-- <img src="https://pionezero.com/diageo/icon_finder/box.png" class="boxsz"> -->
                   </div>
-                  <div class="col" style="font-size:0.85em;">
+                  <div class="col smtxt">
                     <br />
-                    SKU: JOHNNW502
+                    SKU: KETE93
                     </br><br />
                     PRICE: $250
                     </br><br />
-                    <button type="button" class="btn btn-dark">Buy Display</button>
+                    <button type="button" class="btn btn-dark">Buy</button>
                   </div>
                 </div>
               </div>
@@ -781,12 +827,12 @@
             <div class="col-md-5">
               <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-              <img src="https://pionezero.com/diageo/brands/brands__0012_ketelone_fix.jpg" style="width:100%;height:auto;background:#ebebeb;border-radius:18px;padding:12px;">
+              <img src="https://pionezero.com/diageo/brands/brands__0012_ketelone_fix.jpg" class="brandbg">
             </div>
           </div>
 
           <!-- <hr class="featurette-divider"> -->
-          <div class="featurette-divider" style="display:block;width:100%;height:1px;"></div>
+          <div class="featurette-divider"></div>
 
           <!-- /END THE FEATURETTES -->
           
